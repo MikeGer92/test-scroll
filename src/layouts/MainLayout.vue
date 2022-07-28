@@ -55,13 +55,14 @@ export default {
   overflow-y: hidden;
 }
 .block__search {
+  width: 100%;
+  max-width: 400px;
   position: fixed;
   display: flex;
   margin: 10px 0;
   z-index: 2;
   &_field {
     width: 100%;
-    max-width: 400px;
     height: 50px;
     border-radius: 10px;
     border: none;
