@@ -60,7 +60,8 @@ export default {
   margin: 10px 0;
   z-index: 2;
   &_field {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 50px;
     border-radius: 10px;
     border: none;
