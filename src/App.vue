@@ -33,16 +33,13 @@ export default {
     async handleScroll () {
       this.lastScroll = this.$store.getters['currentScrollY']
       this.scrollPos = window.scrollY
-      // console.log(this.scrollPos)
-      // console.log(this.$store.getters['currentScrollY'])
       if (window.scrollY > this.lastScroll) {
         this.scrollDirect = false
-      } else {
+      } else if (window.scrollY < this.lastScroll || window.scrollY === 0){
         this.scrollDirect = true
       }
       await this.$store.dispatch('setIsShowHeader', this.scrollDirect);
       this.$store.dispatch('setCurrentScrollY', this.scrollPos);
-      // console.log(this.scrollDirect)
     }
   },
 }
@@ -50,7 +47,6 @@ export default {
 </script>
 
 <style lang="scss">
-// @import 'assets/index';
 #app {
   font-family: Inter;
   -webkit-font-smoothing: antialiased;
