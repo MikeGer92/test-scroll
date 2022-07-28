@@ -67,17 +67,8 @@ export default {
   },
   methods: {
     changeShowHeader() {
-      // this.scrollPos = this.$store.getters['currentScrollY']
-      // this.newScrollPos = window.scrollY
-      // console.log(this.newScrollPos)
-
-      // if (this.scrollPos < 100) {
-      //   this.showHeader = true;
-      // } else {
-      //   this.showHeader = false;
-      // }
-      // console.log(this.showHeader)
-      
+      console.log(this.isShowHeader)
+      console.log(this.currentScrollY)
     },
   },
   mounted() {
@@ -99,7 +90,6 @@ html {
 }
 .home {
   max-width: 1920px;
-  // height: 100vh;
   display: flex;
   overflow-y: hidden;
   &__wrapper {
@@ -111,9 +101,6 @@ html {
     display: flex;
     flex-direction: column;
     overflow-x: scroll;
-    // -webkit-scrollbar { width: 0 };
-    // -ms-overflow-style: none;
-    // overflow: -moz-scrollbars-none; 
     &_block {
       display: flex;
       flex-direction: row;
